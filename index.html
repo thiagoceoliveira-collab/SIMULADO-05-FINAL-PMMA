@@ -119,6 +119,20 @@ button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visi
 @media print{.context-reading-controls,.storage-warning,#paperCsvStatus{display:none!important}.online-result-item.c span,.online-result-item.e span,.online-result-item.b span{color:#111!important}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
+
+/* Mensagem de encerramento aprovada — Simulado 05 */
+.closing-message{position:relative;margin-top:30px;padding:clamp(22px,4vw,36px);border:1px solid rgba(215,168,61,.34);border-left:4px solid var(--gold);border-radius:20px;background:linear-gradient(145deg,rgba(215,168,61,.075),rgba(75,145,216,.04));color:var(--white);overflow-wrap:anywhere}
+.closing-message .closing-eyebrow{color:var(--gold2);font-size:.73rem;letter-spacing:.12em;text-transform:uppercase;font-weight:850;margin-bottom:13px}
+.closing-message h3{max-width:34ch;margin:0 0 24px;color:var(--gold2);font-size:clamp(1.2rem,3.5vw,1.75rem);line-height:1.3;letter-spacing:.01em}
+.closing-message p{margin:0 0 18px;font-size:clamp(.96rem,2.5vw,1.04rem);line-height:1.8;color:var(--white)}
+.closing-message p:last-child{margin-bottom:0}
+.closing-message strong{font-weight:850}
+.closing-message .closing-pledge{margin:24px 0;padding:18px 20px;border-left:3px solid var(--gold2);border-radius:0 12px 12px 0;background:var(--ov-035)}
+.closing-message .closing-pledge p{margin:0;font-size:clamp(1.02rem,3vw,1.18rem);line-height:1.65}
+.closing-message .closing-signature{margin-top:23px;padding-top:18px;border-top:1px solid var(--line);color:var(--gold2)}
+@media(max-width:420px){.closing-message{padding:21px 18px}.closing-message .closing-pledge{padding:15px}}
+@media print{.closing-message{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -231,6 +245,28 @@ button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visi
       </div>
       <div id="paperCsvStatus" class="csv-status" role="status" aria-live="polite">Baixe o CSV para liberar a pasta de envio.</div>
       <p class="small-note"><strong>Importante:</strong> este cartão registra apenas as suas marcações. Para entrar no ranking automático, envie ao professor o arquivo <strong>.CSV</strong> baixado nesta tela. A correção das respostas será realizada no processamento do ranking pelo professor.</p>
+      <section id="closingPaperMessage" class="closing-message" aria-labelledby="closingPaperTitle">
+        <div class="closing-eyebrow">Uma mensagem do seu professor</div>
+        <h3 id="closingPaperTitle">A ÚLTIMA MARCHA: EU SIGO COM VOCÊ ATÉ O FIM</h3>
+        <p>Chegamos ao nosso último simulado antes da prova. E, antes de você encerrar esta página, quero que se lembre de tudo o que construímos até aqui.</p>
+        <p>Quando começamos, cada um de vocês trouxe um sonho: conquistar uma vaga na Polícia Militar do Maranhão. Ao longo dessa caminhada, fui conhecendo meus alunos pelas perguntas, pelas dificuldades, pelas histórias e pela vontade de continuar. Cada nome passou a representar alguém por quem eu torço.</p>
+        <p>Eu acompanhei a evolução de vocês. Vi dúvidas se transformarem em compreensão. Vi assuntos que pareciam impossíveis começarem a fazer sentido. Vi vocês voltarem às questões, reconhecerem as pegadinhas e ganharem confiança nas próprias decisões.</p>
+        <p><strong>É dessa evolução que você precisa se lembrar agora.</strong></p>
+        <p>Imagine a nossa preparação como uma longa marcha. Houve trechos difíceis, cansaço e momentos em que o destino parecia distante. Cada aula, cada revisão e cada simulado ajudou você a firmar o passo. Até os erros tiveram uma função: mostrar onde ajustar a rota.</p>
+        <p>Meu compromisso como professor sempre foi caminhar com você. Explicar de novo quando fosse necessário, apontar o caminho e ajudar você a reconhecer a força que estava construindo.</p>
+        <p>Agora, nos metros finais, seguimos lado a lado.</p>
+        <p>No domingo, entre na sala levando o conhecimento que acumulou e a serenidade para usá-lo. Leia com atenção. Administre o tempo. Diante de um item difícil, respire e use a estratégia que treinamos. Continue trabalhando, uma questão de cada vez.</p>
+        <p>Quando a insegurança aparecer, lembre-se dos assuntos que você passou a dominar. Das questões que aprendeu a resolver. Dos dias em que, mesmo cansado, encontrou disposição para estudar mais um pouco.</p>
+        <p><strong>Você tem motivos concretos para confiar na sua preparação.</strong></p>
+        <p>Eu acredito em você porque acompanhei essa caminhada. Sei o esforço que existe por trás de cada resposta marcada neste simulado.</p>
+        <p>Antes de começar a prova, diga a si mesmo:</p>
+        <blockquote class="closing-pledge"><p><strong>“Eu me preparei. Eu evoluí. Tenho condições de fazer uma boa prova. Vou usar tudo o que aprendi, uma questão de cada vez.”</strong></p></blockquote>
+        <p>Erga a cabeça. Valorize o caminho percorrido. Honre seu esforço com atenção, equilíbrio e coragem.</p>
+        <p>Eu sigo com você até o último item.</p>
+        <p><strong>Estamos juntos, minha tropa. Vamos concluir essa marcha com firmeza.</strong></p>
+        <p class="closing-signature"><strong>Professor Thiago Oliveira</strong></p>
+      </section>
+
     </div>
   </div>
 </section>
@@ -345,6 +381,28 @@ button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visi
         <button id="onlineNewAttemptBtn" class="secondary-btn" style="width:auto;margin:0" type="button">↻ Nova tentativa</button>
       </div>
       <p class="small-note"><strong>Arquivo do ranking:</strong> C = Certo; E = Errado; B = item em branco. O CSV possui formato padronizado para processamento automático, já leva os dados necessários aos critérios de desempate e não contém o gabarito oficial nem a nota do aluno.</p>
+      <section id="closingOnlineMessage" class="closing-message" aria-labelledby="closingOnlineTitle">
+        <div class="closing-eyebrow">Uma mensagem do seu professor</div>
+        <h3 id="closingOnlineTitle">A ÚLTIMA MARCHA: EU SIGO COM VOCÊ ATÉ O FIM</h3>
+        <p>Chegamos ao nosso último simulado antes da prova. E, antes de você encerrar esta página, quero que se lembre de tudo o que construímos até aqui.</p>
+        <p>Quando começamos, cada um de vocês trouxe um sonho: conquistar uma vaga na Polícia Militar do Maranhão. Ao longo dessa caminhada, fui conhecendo meus alunos pelas perguntas, pelas dificuldades, pelas histórias e pela vontade de continuar. Cada nome passou a representar alguém por quem eu torço.</p>
+        <p>Eu acompanhei a evolução de vocês. Vi dúvidas se transformarem em compreensão. Vi assuntos que pareciam impossíveis começarem a fazer sentido. Vi vocês voltarem às questões, reconhecerem as pegadinhas e ganharem confiança nas próprias decisões.</p>
+        <p><strong>É dessa evolução que você precisa se lembrar agora.</strong></p>
+        <p>Imagine a nossa preparação como uma longa marcha. Houve trechos difíceis, cansaço e momentos em que o destino parecia distante. Cada aula, cada revisão e cada simulado ajudou você a firmar o passo. Até os erros tiveram uma função: mostrar onde ajustar a rota.</p>
+        <p>Meu compromisso como professor sempre foi caminhar com você. Explicar de novo quando fosse necessário, apontar o caminho e ajudar você a reconhecer a força que estava construindo.</p>
+        <p>Agora, nos metros finais, seguimos lado a lado.</p>
+        <p>No domingo, entre na sala levando o conhecimento que acumulou e a serenidade para usá-lo. Leia com atenção. Administre o tempo. Diante de um item difícil, respire e use a estratégia que treinamos. Continue trabalhando, uma questão de cada vez.</p>
+        <p>Quando a insegurança aparecer, lembre-se dos assuntos que você passou a dominar. Das questões que aprendeu a resolver. Dos dias em que, mesmo cansado, encontrou disposição para estudar mais um pouco.</p>
+        <p><strong>Você tem motivos concretos para confiar na sua preparação.</strong></p>
+        <p>Eu acredito em você porque acompanhei essa caminhada. Sei o esforço que existe por trás de cada resposta marcada neste simulado.</p>
+        <p>Antes de começar a prova, diga a si mesmo:</p>
+        <blockquote class="closing-pledge"><p><strong>“Eu me preparei. Eu evoluí. Tenho condições de fazer uma boa prova. Vou usar tudo o que aprendi, uma questão de cada vez.”</strong></p></blockquote>
+        <p>Erga a cabeça. Valorize o caminho percorrido. Honre seu esforço com atenção, equilíbrio e coragem.</p>
+        <p>Eu sigo com você até o último item.</p>
+        <p><strong>Estamos juntos, minha tropa. Vamos concluir essa marcha com firmeza.</strong></p>
+        <p class="closing-signature"><strong>Professor Thiago Oliveira</strong></p>
+      </section>
+
     </div>
   </div>
 </section>
